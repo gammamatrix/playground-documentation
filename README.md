@@ -23,8 +23,41 @@ Further reading:
 
 ## Build
 
-### HTML
+- See Makefile: https://github.com/readthedocs/readthedocs-build/blob/master/docs/Makefile
+
+```sh
+make clean
+```
+- Clean up before building
+
+### Document formats
 
 ```sh
 make html
+```
+
+```sh
+make json
+```
+
+```sh
+make text
+```
+
+```sh
+make man
+```
+
+### Document tools
+
+```sh
+make changes
+```
+
+```sh
+make linkcheck
+```
+
+```sh
+make help
 ```
