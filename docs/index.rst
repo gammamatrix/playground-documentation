@@ -4,6 +4,9 @@ Playground Documentation
 :doc:`installation`
    How to install Playground into your application ecosystem.
 
+:doc:`applications`
+   Playground based applications for using Playground Components.
+
 :doc:`playground`
    Information about the base Playground packages.
 
@@ -30,6 +33,7 @@ Playground Documentation
    :hidden:
 
    installation
+   applications
    playground
    components
    models

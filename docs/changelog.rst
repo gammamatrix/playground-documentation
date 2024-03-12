@@ -21,3 +21,11 @@ Known issues
 ------------
 
 * See the respective `Playground packages in GitHub for issues <https://github.com/gammamatrix/>`_.
+
+
+Historical
+----------
+
+Playground began on PHP v3 and PHP v4 with MySQL v3.23.
+
+Past versions were based on Doctrine, Symfony and Zend Framework.
