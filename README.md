@@ -21,6 +21,10 @@ pip install sphinx-rtd-theme
 Further reading:
 - [Read the Docs: Getting started with Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
 
+```sh
+pip install sphinx-copybutton
+```
+
 ## Build
 
 - See Makefile: https://github.com/readthedocs/readthedocs-build/blob/master/docs/Makefile

@@ -4,26 +4,10 @@ Components
 Playground provides components across packages to handle the needs of an application.
 
 
-Admin
------
+.. toctree::
+   :maxdepth: 3
+   :caption: Playground Components
 
-Packages
-^^^^^^^^
-
-playground-admin
-""""""""""""""""
-
-Provides the models for playground-admin-resource.
-
-playground-admin-resource
-"""""""""""""""""""""""""
-
-Provides an API and a Laravel Blade UI.
-
-Auth
-----
-
-Packages
-^^^^^^^^
-
-* playground-auth
+   components/admin.rst
+   components/cms.rst
+   components/matrix.rst
