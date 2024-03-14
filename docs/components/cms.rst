@@ -63,7 +63,7 @@ See the contents of the published config file: `database/migrations <https://git
 
     Default: ``false``
 
-    Description: The loading option for migrations does not take effect if the migrations have been published to your app. The control for loading is handled in the package [ServiceProvider.](src/ServiceProvider.php)
+    Description: The loading option for migrations does not take effect if the migrations have been published to your app. The control for loading is handled in the package `ServiceProvider <https://github.com/gammamatrix/playground-admin/blob/develop/src/ServiceProvider.php>`_.
 
 You can publish the migrations file with:
 

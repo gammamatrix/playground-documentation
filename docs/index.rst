@@ -22,9 +22,8 @@ Playground Documentation
 
 .. Attention::
 
-   Playground v73.0 is expected to release with Laravel v11.
+   Playground v73.0 requires Laravel v11.
 
-   * At this time, the upgrade has not been tested.
    * See the `Playground Project Status Board for v73.0.0 (on GitHub Projects) <https://github.com/users/gammamatrix/projects/1/views/2?sliceBy%5BcolumnId%5D=Repository>`_.
 
 .. toctree::
