@@ -205,21 +205,21 @@ Routes
 """"""
 
 ``PLAYGROUND_CMS_API_ROUTES_CMS``
-    Config: ``playground-cms-api.middleware.routes.cms``
+    Config: ``playground-cms-api.routes.cms``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_ROUTES_SNIPPETS``
-    Config: ``playground-cms-api.middleware.routes.snippets``
+    Config: ``playground-cms-api.routes.snippets``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_ROUTES_PAGES``
-    Config: ``playground-cms-api.middleware.routes.pages``
+    Config: ``playground-cms-api.routes.pages``
 
     Type: ``bool``
 
@@ -364,21 +364,21 @@ Routes
 """"""
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_CMS``
-    Config: ``playground-cms-resource.middleware.routes.cms``
+    Config: ``playground-cms-resource.routes.cms``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_PAGES``
-    Config: ``playground-cms-resource.middleware.routes.pages``
+    Config: ``playground-cms-resource.routes.pages``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_SNIPPETS``
-    Config: ``playground-cms-resource.middleware.routes.snippets``
+    Config: ``playground-cms-resource.routes.snippets``
 
     Type: ``bool``
 

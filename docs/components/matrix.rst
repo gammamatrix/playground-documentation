@@ -146,14 +146,14 @@ Loading
 """""""
 
 ``PLAYGROUND_MATRIX_API_LOAD_POLICIES``
-    Config: ``playground-matrix-api.middleware.load.policies``
+    Config: ``playground-matrix-api.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_LOAD_ROUTES``
-    Config: ``playground-matrix-api.middleware.load.routes``
+    Config: ``playground-matrix-api.load.routes``
 
     Type: ``bool``
 
@@ -164,105 +164,105 @@ Routes
 """"""
 
 ``PLAYGROUND_MATRIX_API_ROUTES_BACKLOGS``
-    Config: ``playground-matrix-api.middleware.routes.backlogs``
+    Config: ``playground-matrix-api.routes.backlogs``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_BOARDS``
-    Config: ``playground-matrix-api.middleware.routes.boards``
+    Config: ``playground-matrix-api.routes.boards``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_EPICS``
-    Config: ``playground-matrix-api.middleware.routes.epics``
+    Config: ``playground-matrix-api.routes.epics``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_FLOWS``
-    Config: ``playground-matrix-api.middleware.routes.flows``
+    Config: ``playground-matrix-api.routes.flows``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_MILESTONES``
-    Config: ``playground-matrix-api.middleware.routes.milestones``
+    Config: ``playground-matrix-api.routes.milestones``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_NOTES``
-    Config: ``playground-matrix-api.middleware.routes.notes``
+    Config: ``playground-matrix-api.routes.notes``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_PROJECTS``
-    Config: ``playground-matrix-api.middleware.routes.projects``
+    Config: ``playground-matrix-api.routes.projects``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_RELEASES``
-    Config: ``playground-matrix-api.middleware.routes.releases``
+    Config: ``playground-matrix-api.routes.releases``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_ROADMAPS``
-    Config: ``playground-matrix-api.middleware.routes.roadmaps``
+    Config: ``playground-matrix-api.routes.roadmaps``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_SOURCES``
-    Config: ``playground-matrix-api.middleware.routes.sources``
+    Config: ``playground-matrix-api.routes.sources``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_SPRINTS``
-    Config: ``playground-matrix-api.middleware.routes.sprints``
+    Config: ``playground-matrix-api.routes.sprints``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_TAGS``
-    Config: ``playground-matrix-api.middleware.routes.tags``
+    Config: ``playground-matrix-api.routes.tags``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_TEAMS``
-    Config: ``playground-matrix-api.middleware.routes.teams``
+    Config: ``playground-matrix-api.routes.teams``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_TICKETS``
-    Config: ``playground-matrix-api.middleware.routes.tickets``
+    Config: ``playground-matrix-api.routes.tickets``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_API_ROUTES_VERSIONS``
-    Config: ``playground-matrix-api.middleware.routes.versions``
+    Config: ``playground-matrix-api.routes.versions``
 
     Type: ``bool``
 
@@ -359,21 +359,21 @@ Loading
 """""""
 
 ``PLAYGROUND_MATRIX_RESOURCE_LOAD_POLICIES``
-    Config: ``playground-matrix-resource.middleware.load.policies``
+    Config: ``playground-matrix-resource.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_LOAD_ROUTES``
-    Config: ``playground-matrix-resource.middleware.load.routes``
+    Config: ``playground-matrix-resource.load.routes``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_LOAD_VIEWS``
-    Config: ``playground-matrix-resource.middleware.load.views``
+    Config: ``playground-matrix-resource.load.views``
 
     Type: ``bool``
 
@@ -384,112 +384,112 @@ Routes
 """"""
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_MATRIX``
-    Config: ``playground-matrix-resource.middleware.routes.matrix``
+    Config: ``playground-matrix-resource.routes.matrix``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_BACKLOGS``
-    Config: ``playground-matrix-resource.middleware.routes.backlogs``
+    Config: ``playground-matrix-resource.routes.backlogs``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_BOARDS``
-    Config: ``playground-matrix-resource.middleware.routes.boards``
+    Config: ``playground-matrix-resource.routes.boards``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_EPICS``
-    Config: ``playground-matrix-resource.middleware.routes.epics``
+    Config: ``playground-matrix-resource.routes.epics``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_FLOWS``
-    Config: ``playground-matrix-resource.middleware.routes.flows``
+    Config: ``playground-matrix-resource.routes.flows``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_MILESTONES``
-    Config: ``playground-matrix-resource.middleware.routes.milestones``
+    Config: ``playground-matrix-resource.routes.milestones``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_NOTES``
-    Config: ``playground-matrix-resource.middleware.routes.notes``
+    Config: ``playground-matrix-resource.routes.notes``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_PROJECTS``
-    Config: ``playground-matrix-resource.middleware.routes.projects``
+    Config: ``playground-matrix-resource.routes.projects``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_RELEASES``
-    Config: ``playground-matrix-resource.middleware.routes.releases``
+    Config: ``playground-matrix-resource.routes.releases``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_ROADMAPS``
-    Config: ``playground-matrix-resource.middleware.routes.roadmaps``
+    Config: ``playground-matrix-resource.routes.roadmaps``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_SOURCES``
-    Config: ``playground-matrix-resource.middleware.routes.sources``
+    Config: ``playground-matrix-resource.routes.sources``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_SPRINTS``
-    Config: ``playground-matrix-resource.middleware.routes.sprints``
+    Config: ``playground-matrix-resource.routes.sprints``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_TAGS``
-    Config: ``playground-matrix-resource.middleware.routes.tags``
+    Config: ``playground-matrix-resource.routes.tags``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_TEAMS``
-    Config: ``playground-matrix-resource.middleware.routes.teams``
+    Config: ``playground-matrix-resource.routes.teams``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_TICKETS``
-    Config: ``playground-matrix-resource.middleware.routes.tickets``
+    Config: ``playground-matrix-resource.routes.tickets``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_VERSIONS``
-    Config: ``playground-matrix-resource.middleware.routes.versions``
+    Config: ``playground-matrix-resource.routes.versions``
 
     Type: ``bool``
 
@@ -500,28 +500,28 @@ Sitemap
 """""""
 
 ``PLAYGROUND_MATRIX_RESOURCE_SITEMAP_ENABLE``
-    Config: ``playground-matrix-resource.middleware.sitemap.enable``
+    Config: ``playground-matrix-resource.sitemap.enable``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_SITEMAP_GUEST``
-    Config: ``playground-matrix-resource.middleware.sitemap.guest``
+    Config: ``playground-matrix-resource.sitemap.guest``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_SITEMAP_USER``
-    Config: ``playground-matrix-resource.middleware.sitemap.user``
+    Config: ``playground-matrix-resource.sitemap.user``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_MATRIX_RESOURCE_SITEMAP_VIEW``
-    Config: ``playground-matrix-resource.middleware.sitemap.view``
+    Config: ``playground-matrix-resource.sitemap.view``
 
     Type: ``string``
 

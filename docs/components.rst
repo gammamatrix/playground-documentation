@@ -10,6 +10,7 @@ Playground provides components across packages to handle the needs of an applica
 
    components/admin.rst
    components/cms.rst
+   components/lead.rst
    components/login.rst
    components/matrix.rst
    components/site.rst
