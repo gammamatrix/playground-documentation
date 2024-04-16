@@ -13,8 +13,14 @@ Playground Documentation
 :doc:`components`
    Information about the Playground components.
 
+:doc:`mission`
+   Mission statement and goals for Playground.
+
 :doc:`models`
    Information on how to use Playground models.
+
+:doc:`todo`
+   Documentation TODOs
 
 :doc:`ui`
    Using a UI with Playground.
@@ -44,7 +50,9 @@ Playground Documentation
    applications
    playground
    components
+   mission
    models
+   todo
    ui
 
 .. toctree::

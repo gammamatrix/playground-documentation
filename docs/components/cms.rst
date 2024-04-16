@@ -84,10 +84,6 @@ NOTE: This package is required by playground-cms-api and playground-cms-resource
 playground-cms-api
 ------------------
 
-.. Attention:: This package has not been published yet.
-
-Provides an API, without a UI for the Playground Content Management System.
-
 .. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/apis/docs/artisan-about-playground-cms-api.png
 ..    :align: center
 
