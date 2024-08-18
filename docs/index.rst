@@ -1,5 +1,5 @@
 Playground Documentation
-========================
+########################
 
 :doc:`installation`
    How to install Playground into your application ecosystem.
@@ -13,11 +13,23 @@ Playground Documentation
 :doc:`components`
    Information about the Playground components.
 
+:doc:`glossary`
+   Glossary Terms used with Playground.
+
+:doc:`make`
+   Building turn key applications for PHP and ECMAScript packages.
+
+:doc:`middleware`
+   Application middleware for PHP and ECMAScript packages.
+
 :doc:`mission`
    Mission statement and goals for Playground.
 
 :doc:`models`
    Information on how to use Playground models.
+
+:doc:`testing`
+   Testing for PHP and ECMAScript packages using Continuous Integration Workflows under GitHub Actions.
 
 :doc:`todo`
    Documentation TODOs
@@ -27,7 +39,7 @@ Playground Documentation
 
 .. Note::
 
-   Playground is meant to provide usable and copyable code for any type of PHP and EMCAScript applications.
+   Playground is meant to provide usable and copyable code for any type of PHP and ECMAScript applications.
 
    Where possible, we will use the respective language and library coding standards and best practices.
 
@@ -50,8 +62,11 @@ Playground Documentation
    applications
    playground
    components
+   make
+   middleware
    mission
    models
+   testing
    todo
    ui
 
@@ -60,3 +75,4 @@ Playground Documentation
    :hidden:
 
    changelog
+   glossary

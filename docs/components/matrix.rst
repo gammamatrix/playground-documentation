@@ -125,21 +125,21 @@ Authentication and Authorization
 
     Type: ``string|array``
 
-    Default: ``['web']``
+    Default: ``['web', 'auth:sanctum', EnsureFrontendRequestsAreStateful]``
 
 ``PLAYGROUND_MATRIX_API_MIDDLEWARE_USER``
     Config: ``playground-matrix-api.middleware.auth``
 
     Type: ``string|array``
 
-    Default: ``['web', 'auth']``
+    Default: ``['web', 'auth:sanctum', EnsureFrontendRequestsAreStateful]``
 
 ``PLAYGROUND_MATRIX_API_MIDDLEWARE_GUEST``
     Config: ``playground-matrix-api.middleware.guest``
 
     Type: ``string|array``
 
-    Default: ``['web']``
+    Default: ``['web', EnsureFrontendRequestsAreStateful]``
 
 
 Loading

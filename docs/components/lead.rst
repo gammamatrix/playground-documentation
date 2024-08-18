@@ -125,21 +125,21 @@ Authentication and Authorization
 
     Type: ``string|array``
 
-    Default: ``['web']``
+    Default: ``['web', 'auth:sanctum', EnsureFrontendRequestsAreStateful]``
 
 ``PLAYGROUND_LEAD_API_MIDDLEWARE_USER``
     Config: ``playground-lead-api.middleware.auth``
 
     Type: ``string|array``
 
-    Default: ``['web', 'auth']``
+    Default: ``['web', 'auth:sanctum', EnsureFrontendRequestsAreStateful]``
 
 ``PLAYGROUND_LEAD_API_MIDDLEWARE_GUEST``
     Config: ``playground-lead-api.middleware.guest``
 
     Type: ``string|array``
 
-    Default: ``['web']``
+    Default: ``['web' EnsureFrontendRequestsAreStateful]``
 
 
 Loading
