@@ -18,6 +18,9 @@ Glossary
     Continuous Integration
       Continuous integration (CI) is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state. Read more on `Continuous integration at Wikipedia <https://en.wikipedia.org/wiki/Continuous_integration>`_.
 
+    CSR
+      Most SPAs use Client Side Rendering, from a dist build.
+
     ECMAScript
       ECMAScript is a fancy name for JavaScript and superset languages such as TypeScript. Read more about `ECMAScript on Wikipedia <https://en.wikipedia.org/wiki/ECMAScript>`_.
 
@@ -27,10 +30,14 @@ Glossary
     Laravel
       `Laravel <https://laravel.com/>`_ is an open source PHP Framework written on top of Symfony.
 
+    SPA
+      JavaScript frameworks often build out Single Page Applications for deployments.
+
     Symfony
       `Symfony <https://symfony.com/>`_ is an open source PHP Framework.
 
     TypeScript
       TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. Read more about `TypeScript on Wikipedia <https://en.wikipedia.org/wiki/TypeScript>`_.
 
-
+    Vue
+      Vue 3 is a TypeScript based web framework. Read more on `Vue.js <https://vuejs.org/>`_.

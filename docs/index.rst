@@ -1,6 +1,18 @@
 Playground Documentation
 ########################
 
+.. Note::
+
+   Playground is meant to provide usable and copyable code for any type of PHP and ECMAScript applications.
+
+   Where possible, we will use the respective language and library coding standards and best practices.
+
+   PHP Packages are built with OpenAPI Documentation, 100% Code Coverage and analyzed with PHPStan at level 9.
+
+   * Currently, there not any packages published on npm.
+   * See all packages for `Playground on GitHub <https://github.com/gammamatrix>`_.
+   * See the available composer packages on `Playground on Packagist <https://packagist.org/packages/gammamatrix/>`_.
+
 :doc:`installation`
    How to install Playground into your application ecosystem.
 
@@ -10,8 +22,11 @@ Playground Documentation
 :doc:`playground`
    Information about the base Playground packages.
 
-:doc:`components`
-   Information about the Playground components.
+:doc:`base-components`
+   Information about the Playground Base Components.
+
+:doc:`built-components`
+   Information about the Playground Components built with playground-make.
 
 :doc:`glossary`
    Glossary Terms used with Playground.
@@ -37,16 +52,6 @@ Playground Documentation
 :doc:`ui`
    Using a UI with Playground.
 
-.. Note::
-
-   Playground is meant to provide usable and copyable code for any type of PHP and ECMAScript applications.
-
-   Where possible, we will use the respective language and library coding standards and best practices.
-
-   * Currently, there not any packages published on npm.
-   * See all packages for `Playground on GitHub <https://github.com/gammamatrix>`_.
-   * See the available composer packages on `Playground on Packagist <https://packagist.org/packages/gammamatrix/>`_.
-
 .. Attention::
 
    Playground v73.0 requires Laravel v11.
@@ -61,7 +66,9 @@ Playground Documentation
    installation
    applications
    playground
-   components
+   base-components
+   built-components
+   coding-standards
    make
    middleware
    mission

@@ -1,5 +1,5 @@
 Http
-====
+####
 
 The Playground Matrix provides controller and request handling.
 
@@ -7,7 +7,7 @@ The Playground Matrix provides controller and request handling.
 
 
 playground-http
----------------
+***************
 
 Provides the base classes, concerns, contracts and translations for API and Resource packages.
 
@@ -24,8 +24,9 @@ Provides the base classes, concerns, contracts and translations for API and Reso
         https://github.com/gammamatrix/playground-http
 
 
+
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
@@ -34,7 +35,7 @@ You can publish the configuration file with:
     php artisan vendor:publish --provider="Playground\Http\ServiceProvider" --tag="playground-config"
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 ``PLAYGROUND_HTTP_LOAD_TRANSLATIONS``
     Config: ``playground-http.load.translations``

@@ -3,6 +3,7 @@ Mission Statement
 
 Playground's goal is to provide buildable, usable and copyable code for any type of PHP and ECMAScript applications for the upcoming centuries and millennia.
 
+* The Playground Packages may be installed via `Packagist <https://packagist.org/packages/gammamatrix/>`_ with Composer or they may be rebuilt with the Playground Make commands to fit your organization namespace and coding styles.
 
 .. Note::
 

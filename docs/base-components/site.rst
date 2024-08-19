@@ -29,6 +29,8 @@ playground-site-blade
         https://github.com/gammamatrix/playground-site-blade
 
 
+.. _site Configuration:
+
 Configuration
 ^^^^^^^^^^^^^
 

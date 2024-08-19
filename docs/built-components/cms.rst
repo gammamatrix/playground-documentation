@@ -1,5 +1,5 @@
 CMS Packages
-============
+########################
 
 The Playground CMS provides a content management system, with pages and
 snippets, that may be consumed by a Laravel application or served as JSON from a Laravel based API or Resource.
@@ -15,7 +15,7 @@ Features:
 
 
 playground-cms
---------------
+*************************
 
 Provides the models for playground-cms-api and playground-cms-resource.
 
@@ -33,20 +33,20 @@ Provides the models for playground-cms-api and playground-cms-resource.
 
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag playground-config
 
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 Migrations
-""""""""""
+----------
 
 All migrations are disabled by default.
 
@@ -69,10 +69,10 @@ You can publish the migrations file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag="playground-migrations"
+    php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag playground-migrations
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package is required by playground-cms-api and playground-cms-resource.
 
@@ -82,7 +82,7 @@ NOTE: This package is required by playground-cms-api and playground-cms-resource
 
 
 playground-cms-api
-------------------
+*************************
 
 .. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/apis/docs/artisan-about-playground-cms-api.png
 ..    :align: center
@@ -98,7 +98,7 @@ playground-cms-api
 
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
 Documentation is generated from the gammamatrix/playground-cms-api/swagger.json provided in the repository packagist.org/packages/gammamatrix/playground-cms-api/swagger.json.
 
@@ -111,7 +111,7 @@ Documentation is generated from the gammamatrix/playground-cms-api/swagger.json 
 
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
@@ -120,10 +120,10 @@ You can publish the configuration file with:
     php artisan vendor:publish --provider="Playground\Cms\Api\ServiceProvider" --tag="playground-config"
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 ``PLAYGROUND_CMS_API_MIDDLEWARE_DEFAULT``
     Config: ``playground-cms-api.middleware.default``
@@ -148,7 +148,7 @@ Authentication and Authorization
 
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_CMS_API_LOAD_POLICIES``
     Config: ``playground-cms-api.middleware.load.policies``
@@ -173,7 +173,7 @@ Loading
 
 
 Revision
-""""""""
+--------
 
 ``PLAYGROUND_CMS_API_ROUTES_OPTIONAL``
     Config: ``playground-cms-api.middleware.revisions.optional``
@@ -198,7 +198,7 @@ Revision
 
 
 Routes
-""""""
+------
 
 ``PLAYGROUND_CMS_API_ROUTES_CMS``
     Config: ``playground-cms-api.routes.cms``
@@ -222,7 +222,7 @@ Routes
     Default: ``true``
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-cms.
 
@@ -232,7 +232,7 @@ NOTE: This package requires playground-cms.
 
 
 playground-cms-resource
------------------------
+*************************
 
 Provides an API and a Laravel Blade UI for the Playground Content Management System.
 
@@ -250,7 +250,7 @@ Provides an API and a Laravel Blade UI for the Playground Content Management Sys
 
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
 Documentation is generated from the `gammamatrix/playground-cms-resource/swagger.json provided in the repository <https://github.com/gammamatrix/playground-cms-resource/blob/develop/swagger.json>`_.
 
@@ -263,19 +263,19 @@ Documentation is generated from the `gammamatrix/playground-cms-resource/swagger
 
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Cms\Resource\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Cms\Resource\ServiceProvider" --tag playground-config
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 If you do not want to use the flexible policies available in Playground, you may publish the config and/or routes to your base application and customize them and the middleware.
 
@@ -307,7 +307,7 @@ If you wish to use your own policies, copy from `src/Policies <https://github.co
 
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_CMS_RESOURCE_LOAD_POLICIES``
     Config: ``playground-cms-resource.middleware.load.policies``
@@ -332,7 +332,7 @@ Loading
 
 
 Revision
-""""""""
+--------
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_OPTIONAL``
     Config: ``playground-cms-resource.middleware.revisions.optional``
@@ -357,7 +357,7 @@ Revision
 
 
 Routes
-""""""
+------
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_CMS``
     Config: ``playground-cms-resource.routes.cms``
@@ -382,7 +382,7 @@ Routes
 
 
 Sitemap
-"""""""
+-------
 
 ``PLAYGROUND_CMS_RESOURCE_SITEMAP_ENABLE``
     Config: ``playground-cms-resource.middleware.sitemap.enable``
@@ -416,7 +416,7 @@ Sitemap
 
 
 UI
-""
+--
 
 ``PLAYGROUND_CMS_RESOURCE_BLADE``
     Config: ``playground-cms-resource.blade``
@@ -428,10 +428,20 @@ UI
     Description: Sets the view namespace for the package.
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-cms.
 
 .. code-block:: bash
 
     composer require gammamatrix/playground-cms-resource
+
+
+
+site-playground-cms-angular
+***************************
+
+.. Note::
+
+    - This :term:`CSR` Angular 16 application uses Angular Material and will eventually be generated by `playground-make-angular <https://github.com/gammamatrix/playground-make-angular>`_.
+    - https://github.com/gammamatrix/site-playground-cms-angular
