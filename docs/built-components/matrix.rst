@@ -1,14 +1,17 @@
 Matrix Packages
-===============
+###############
 
-The Playground Matrix provides a project management system that may be consumed
-by a Laravel application or served as JSON from a Laravel based API or Resource.
+The Playground Matrix provides a client relations management system, with Backlogs, Boards, Epics, Flows, Matrixs, Milestones, Notes, Projects, Releases, Roadmaps, Sources, Sprints, Tags, Teams, Tickets and Versions, that may be utlized by a Laravel application or served as JSON from a Laravel based API or Resource.
+
+Features:
+
+* Provides models for Backlogs, Boards, Epics, Flows, Matrixs, Milestones, Notes, Projects, Releases, Roadmaps, Sources, Sprints, Tags, Teams, Tickets and Versions
 
 .. contents:: Table of Contents
 
 
 playground-matrix
------------------
+*****************
 
 Provides the models for playground-matrix-api and playground-matrix-resource.
 
@@ -25,32 +28,38 @@ Provides the models for playground-matrix-api and playground-matrix-resource.
         https://github.com/gammamatrix/playground-matrix
 
 
+.. _playground-matrix Configuration:
+
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Matrix\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Matrix\ServiceProvider" --tag playground-config
 
+
+.. _playground-matrix Environment Variables:
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-matrix Migrations:
 
 Migrations
-""""""""""
+----------
 
 All migrations are disabled by default.
 
 See the contents of the published config file: `database/migrations <https://github.com/gammamatrix/playground-matrix/tree/develop/database/migrations>`_
-- NOTE: There are 15 tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
+- NOTE: There are 16 tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
 
 
 * If you do not wish to publish the migrations to your application, you may use the Environment Variable: ``PLAYGROUND_MATRIX_LOAD_MIGRATIONS`` in your ``.env``.
 
 ``PLAYGROUND_MATRIX_LOAD_MIGRATIONS``
-    Config: ``playground-matrix-resource.middleware.default``
+    Config: ``playground-matrix.load.migrations``
 
     Type: ``bool``
 
@@ -62,10 +71,12 @@ You can publish the migrations file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Matrix\ServiceProvider" --tag="playground-migrations"
+    php artisan vendor:publish --provider="Playground\Matrix\ServiceProvider" --tag playground-migrations
+
+.. _playground-matrix Installation:
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package is required by playground-matrix-api and playground-matrix-resource.
 
@@ -75,7 +86,7 @@ NOTE: This package is required by playground-matrix-api and playground-matrix-re
 
 
 playground-matrix-api
----------------------
+*********************
 
 Provides an API, without a UI for the Playground Project Management System.
 
@@ -86,27 +97,35 @@ Provides an API, without a UI for the Playground Project Management System.
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-matrix-api/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-matrix-api/blob/develop/.github/workflows/ci.yml
     Packagist
         https://packagist.org/packages/gammamatrix/playground-matrix-api
     Source on GitHub
         https://github.com/gammamatrix/playground-matrix-api
 
+.. _playground-matrix-api API Documentation:
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
-Documentation is generated from the `gammamatrix/playground-matrix-api/swagger.json provided in the repository <https://github.com/gammamatrix/playground-matrix-api/blob/develop/swagger.json>`_.
+Documentation is generated from the `gammamatrix/playground-matrix-api/swagger.json <https://github.com/gammamatrix/playground-matrix-api/blob/develop/swagger.json>`_.
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-matrix-api/blob/develop/swagger.json
     Swagger Editor UI
-        https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-matrix-api/develop/swagger.json
+        - https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-matrix-api/develop/swagger.json
     Redocly
         https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-matrix-api/develop/swagger.json
 
+.. _playground-matrix-api Configuration:
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
@@ -114,11 +133,15 @@ You can publish the configuration file with:
 
     php artisan vendor:publish --provider="Playground\Matrix\Api\ServiceProvider" --tag="playground-config"
 
+.. _playground-matrix-api Environment Variables:
+
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-matrix-api Authentication and Authorization:
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 ``PLAYGROUND_MATRIX_API_MIDDLEWARE_DEFAULT``
     Config: ``playground-matrix-api.middleware.default``
@@ -141,9 +164,10 @@ Authentication and Authorization
 
     Default: ``['web', EnsureFrontendRequestsAreStateful]``
 
+.. _playground-matrix-api Loading:
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_MATRIX_API_LOAD_POLICIES``
     Config: ``playground-matrix-api.load.policies``
@@ -159,9 +183,17 @@ Loading
 
     Default: ``true``
 
+``PLAYGROUND_MATRIX_API_LOAD_TRANSLATIONS``
+    Config: ``playground-matrix-api.load.translations``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+.. _playground-matrix-api Routes:
 
 Routes
-""""""
+------
 
 ``PLAYGROUND_MATRIX_API_ROUTES_BACKLOGS``
     Config: ``playground-matrix-api.routes.backlogs``
@@ -268,8 +300,11 @@ Routes
 
     Default: ``true``
 
+
+.. _playground-matrix-api Installation:
+
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-matrix.
 
@@ -279,7 +314,7 @@ NOTE: This package requires playground-matrix.
 
 
 playground-matrix-resource
---------------------------
+**************************
 
 Provides an API and a Laravel Blade UI for the Playground Project Management System.
 
@@ -290,41 +325,65 @@ Provides an API and a Laravel Blade UI for the Playground Project Management Sys
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-matrix-resource/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-matrix-resource/blob/develop/.github/workflows/ci.yml
     Packagist
         https://packagist.org/packages/gammamatrix/playground-matrix-resource
     Source on GitHub
         https://github.com/gammamatrix/playground-matrix-resource
-    Wiki on GitHub
-        https://github.com/gammamatrix/playground-matrix-resource/wiki
 
+.. _playground-matrix-resource API Documentation:
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
 Documentation is generated from the `gammamatrix/playground-matrix-resource/swagger.json provided in the repository <https://github.com/gammamatrix/playground-matrix-resource/blob/develop/swagger.json>`_.
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-matrix-resource/blob/develop/swagger.json
     Swagger Editor UI
         https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-matrix-resource/develop/swagger.json
     Redocly
         https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-matrix-resource/develop/swagger.json
 
+.. _playground-matrix-resource Configuration:
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Matrix\Resource\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Matrix\Resource\ServiceProvider" --tag playground-config
+
+.. _playground-matrix-resource Environment Variables:
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-matrix-resource About:
+
+About
+-------
+
+``PLAYGROUND_MATRIX_RESOURCE_ABOUT``
+    Config: ``playground-matrix-resource.about``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+    Description: Displays information with the `artisan about` command.
+
+.. _playground-matrix-resource Authentication and Authorization:
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 If you do not want to use the flexible policies available in Playground, you may publish the config and/or routes to your base application and customize them and the middleware.
 
@@ -354,9 +413,10 @@ If you wish to use your own policies, copy from `src/Policies <https://github.co
 
     Default: ``['web']``
 
+.. _playground-matrix-resource Loading:
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_MATRIX_RESOURCE_LOAD_POLICIES``
     Config: ``playground-matrix-resource.load.policies``
@@ -372,6 +432,13 @@ Loading
 
     Default: ``true``
 
+``PLAYGROUND_MATRIX_RESOURCE_LOAD_TRANSLATIONS``
+    Config: ``playground-matrix-resource.load.translations``
+
+    Type: ``bool``
+
+    Default: ``true``
+
 ``PLAYGROUND_MATRIX_RESOURCE_LOAD_VIEWS``
     Config: ``playground-matrix-resource.load.views``
 
@@ -379,9 +446,10 @@ Loading
 
     Default: ``true``
 
+.. _playground-matrix-resource Routes:
 
 Routes
-""""""
+------
 
 ``PLAYGROUND_MATRIX_RESOURCE_ROUTES_MATRIX``
     Config: ``playground-matrix-resource.routes.matrix``
@@ -496,8 +564,10 @@ Routes
     Default: ``true``
 
 
+.. _playground-matrix-resource Sitemap:
+
 Sitemap
-"""""""
+-------
 
 ``PLAYGROUND_MATRIX_RESOURCE_SITEMAP_ENABLE``
     Config: ``playground-matrix-resource.sitemap.enable``
@@ -529,9 +599,10 @@ Sitemap
 
     Description: This blade file will be included on the application sitemap.
 
+.. _playground-matrix-resource UI:
 
 UI
-""
+----
 
 ``PLAYGROUND_MATRIX_RESOURCE_BLADE``
     Config: ``playground-matrix-resource.blade``
@@ -542,11 +613,22 @@ UI
 
     Description: Sets the view namespace for the package.
 
+.. _playground-matrix-resource Installation:
+
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-matrix.
 
 .. code-block:: bash
 
     composer require gammamatrix/playground-matrix-resource
+
+
+
+site-playground-matrix-angular
+******************************
+
+.. Note::
+
+    - This :term:`CSR` Angular application uses Angular Material and will eventually be generated by `playground-make-angular <https://github.com/gammamatrix/playground-make-angular>`_.

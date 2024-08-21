@@ -24,6 +24,7 @@ Provides the base classes, concerns, contracts and translations for API and Reso
         https://github.com/gammamatrix/playground-http
 
 
+.. _playground-http Configuration:
 
 Configuration
 =============

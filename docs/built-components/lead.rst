@@ -1,21 +1,24 @@
 Lead Packages
-===============
+#############
 
-The Playground Lead provides a project management system that may be consumed
-by a Laravel application or served as JSON from a Laravel based API or Resource.
+The Playground Lead provides a sales campaign management system, with campaigns, goals, leads, opportunities, plans, regions, reports, sources, tasks, teams, and teammates, that may be utlized by a Laravel application or served as JSON from a Laravel based API or Resource.
+
+Features:
+
+* Provides models for campaigns, goals, leads, opportunities, plans, regions, reports, sources, tasks, teams, and teammates.
 
 .. contents:: Table of Contents
 
 
 playground-lead
------------------
+***************
 
 Provides the models for playground-lead-api and playground-lead-resource.
 
-.. figure:: https://raw.githubusercontent.com/gammamatrix/playground-lead/develop/resources/docs/artisan-about-playground-lead.png
-   :align: center
+.. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-lead/develop/resources/docs/artisan-about-playground-lead.png
+..    :align: center
 
-   ``artisan about`` for playground-lead
+..    ``artisan about`` for playground-lead
 
 .. admonition:: Package Information
 
@@ -25,32 +28,38 @@ Provides the models for playground-lead-api and playground-lead-resource.
         https://github.com/gammamatrix/playground-lead
 
 
+.. _playground-lead Configuration:
+
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Lead\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Lead\ServiceProvider" --tag playground-config
 
+
+.. _playground-lead Environment Variables:
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-lead Migrations:
 
 Migrations
-""""""""""
+----------
 
 All migrations are disabled by default.
 
 See the contents of the published config file: `database/migrations <https://github.com/gammamatrix/playground-lead/tree/develop/database/migrations>`_
-- NOTE: There are 15 tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
+- NOTE: There are four tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
 
 
 * If you do not wish to publish the migrations to your application, you may use the Environment Variable: ``PLAYGROUND_LEAD_LOAD_MIGRATIONS`` in your ``.env``.
 
 ``PLAYGROUND_LEAD_LOAD_MIGRATIONS``
-    Config: ``playground-lead-resource.middleware.default``
+    Config: ``playground-lead.load.migrations``
 
     Type: ``bool``
 
@@ -62,10 +71,12 @@ You can publish the migrations file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Lead\ServiceProvider" --tag="playground-migrations"
+    php artisan vendor:publish --provider="Playground\Lead\ServiceProvider" --tag playground-migrations
+
+.. _playground-lead Installation:
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package is required by playground-lead-api and playground-lead-resource.
 
@@ -75,9 +86,7 @@ NOTE: This package is required by playground-lead-api and playground-lead-resour
 
 
 playground-lead-api
----------------------
-
-Provides an API, without a UI for the Playground Project Management System.
+*******************
 
 .. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-lead-api/develop/apis/docs/artisan-about-playground-lead-api.png
 ..    :align: center
@@ -86,27 +95,35 @@ Provides an API, without a UI for the Playground Project Management System.
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-lead-api/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-lead-api/blob/develop/.github/workflows/ci.yml
     Packagist
         https://packagist.org/packages/gammamatrix/playground-lead-api
     Source on GitHub
         https://github.com/gammamatrix/playground-lead-api
 
+.. _playground-lead-api API Documentation:
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
-Documentation is generated from the `gammamatrix/playground-lead-api/swagger.json provided in the repository <https://github.com/gammamatrix/playground-lead-api/blob/develop/swagger.json>`_.
+Documentation is generated from the `gammamatrix/playground-lead-api/swagger.json <https://github.com/gammamatrix/playground-lead-api/blob/develop/swagger.json>`_.
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-lead-api/blob/develop/swagger.json
     Swagger Editor UI
-        https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-lead-api/develop/swagger.json
+        - https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-lead-api/develop/swagger.json
     Redocly
         https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-lead-api/develop/swagger.json
 
+.. _playground-lead-api Configuration:
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
@@ -114,11 +131,15 @@ You can publish the configuration file with:
 
     php artisan vendor:publish --provider="Playground\Lead\Api\ServiceProvider" --tag="playground-config"
 
+.. _playground-lead-api Environment Variables:
+
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-lead-api Authentication and Authorization:
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 ``PLAYGROUND_LEAD_API_MIDDLEWARE_DEFAULT``
     Config: ``playground-lead-api.middleware.default``
@@ -139,29 +160,38 @@ Authentication and Authorization
 
     Type: ``string|array``
 
-    Default: ``['web' EnsureFrontendRequestsAreStateful]``
+    Default: ``['web', EnsureFrontendRequestsAreStateful]``
 
+.. _playground-lead-api Loading:
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_LEAD_API_LOAD_POLICIES``
-    Config: ``playground-lead-api.middleware.load.policies``
+    Config: ``playground-lead-api.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_LEAD_API_LOAD_ROUTES``
-    Config: ``playground-lead-api.middleware.load.routes``
+    Config: ``playground-lead-api.load.routes``
 
     Type: ``bool``
 
     Default: ``true``
 
+``PLAYGROUND_LEAD_API_LOAD_TRANSLATIONS``
+    Config: ``playground-lead-api.load.translations``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+.. _playground-lead-api Routes:
 
 Routes
-""""""
+------
 
 ``PLAYGROUND_LEAD_API_ROUTES_CAMPAIGNS``
     Config: ``playground-lead-api.routes.campaigns``
@@ -176,6 +206,14 @@ Routes
     Type: ``bool``
 
     Default: ``true``
+
+``PLAYGROUND_LEAD_API_ROUTES_LEAD``
+    Config: ``playground-lead-api.routes.lead``
+
+    Type: ``bool``
+
+    Default: ``true``
+
 
 ``PLAYGROUND_LEAD_API_ROUTES_LEADS``
     Config: ``playground-lead-api.routes.leads``
@@ -240,9 +278,10 @@ Routes
 
     Default: ``true``
 
+.. _playground-lead-api Installation:
 
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-lead.
 
@@ -252,52 +291,76 @@ NOTE: This package requires playground-lead.
 
 
 playground-lead-resource
---------------------------
+************************
 
-Provides an API and a Laravel Blade UI for the Playground Project Management System.
+Provides an API and a Laravel Blade UI for the Playground Content Management System.
 
-.. figure:: https://raw.githubusercontent.com/gammamatrix/playground-lead-resource/develop/resources/docs/artisan-about-playground-lead-resource.png
-   :align: center
+.. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-lead-resource/develop/resources/docs/artisan-about-playground-lead-resource.png
+..    :align: center
 
-   ``artisan about`` for playground-lead-resource
+..    ``artisan about`` for playground-lead-resource
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-lead-resource/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-lead-resource/blob/develop/.github/workflows/ci.yml
     Packagist
         https://packagist.org/packages/gammamatrix/playground-lead-resource
     Source on GitHub
         https://github.com/gammamatrix/playground-lead-resource
-    Wiki on GitHub
-        https://github.com/gammamatrix/playground-lead-resource/wiki
 
+.. _playground-lead-resource API Documentation:
 
 API Documentation
-^^^^^^^^^^^^^^^^^
+=================
 
 Documentation is generated from the `gammamatrix/playground-lead-resource/swagger.json provided in the repository <https://github.com/gammamatrix/playground-lead-resource/blob/develop/swagger.json>`_.
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-lead-resource/blob/develop/swagger.json
     Swagger Editor UI
         https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-lead-resource/develop/swagger.json
     Redocly
         https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-lead-resource/develop/swagger.json
 
+.. _playground-lead-resource Configuration:
 
 Configuration
-^^^^^^^^^^^^^
+=============
 
 You can publish the configuration file with:
 
 .. code-block:: bash
 
-    php artisan vendor:publish --provider="Playground\Lead\Resource\ServiceProvider" --tag="playground-config"
+    php artisan vendor:publish --provider="Playground\Lead\Resource\ServiceProvider" --tag playground-config
+
+.. _playground-lead-resource Environment Variables:
 
 Environment Variables
-^^^^^^^^^^^^^^^^^^^^^
+=====================
+
+.. _playground-lead-resource About:
+
+About
+-------
+
+``PLAYGROUND_LEAD_RESOURCE_ABOUT``
+    Config: ``playground-lead-resource.about``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+    Description: Displays information with the `artisan about` command.
+
+.. _playground-lead-resource Authentication and Authorization:
 
 Authentication and Authorization
-""""""""""""""""""""""""""""""""
+--------------------------------
 
 If you do not want to use the flexible policies available in Playground, you may publish the config and/or routes to your base application and customize them and the middleware.
 
@@ -327,34 +390,50 @@ If you wish to use your own policies, copy from `src/Policies <https://github.co
 
     Default: ``['web']``
 
+.. _playground-lead-resource Loading:
 
 Loading
-"""""""
+-------
 
 ``PLAYGROUND_LEAD_RESOURCE_LOAD_POLICIES``
-    Config: ``playground-lead-resource.middleware.load.policies``
+    Config: ``playground-lead-resource.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_LEAD_RESOURCE_LOAD_ROUTES``
-    Config: ``playground-lead-resource.middleware.load.routes``
+    Config: ``playground-lead-resource.load.routes``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+``PLAYGROUND_LEAD_RESOURCE_LOAD_TRANSLATIONS``
+    Config: ``playground-lead-resource.load.translations``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_LEAD_RESOURCE_LOAD_VIEWS``
-    Config: ``playground-lead-resource.middleware.load.views``
+    Config: ``playground-lead-resource.load.views``
 
     Type: ``bool``
 
     Default: ``true``
 
+.. _playground-lead-resource Routes:
 
 Routes
-""""""
+------
+
+``PLAYGROUND_LEAD_RESOURCE_ROUTES_LEAD``
+    Config: ``playground-lead-resource.routes.lead``
+
+    Type: ``bool``
+
+    Default: ``true``
 
 ``PLAYGROUND_LEAD_RESOURCE_ROUTES_CAMPAIGNS``
     Config: ``playground-lead-resource.routes.campaigns``
@@ -433,9 +512,10 @@ Routes
 
     Default: ``true``
 
+.. _playground-lead-resource Sitemap:
 
 Sitemap
-"""""""
+-------
 
 ``PLAYGROUND_LEAD_RESOURCE_SITEMAP_ENABLE``
     Config: ``playground-lead-resource.sitemap.enable``
@@ -467,9 +547,10 @@ Sitemap
 
     Description: This blade file will be included on the application sitemap.
 
+.. _playground-lead-resource UI:
 
 UI
-""
+----
 
 ``PLAYGROUND_LEAD_RESOURCE_BLADE``
     Config: ``playground-lead-resource.blade``
@@ -480,11 +561,22 @@ UI
 
     Description: Sets the view namespace for the package.
 
+.. _playground-lead-resource Installation:
+
 Installation
-^^^^^^^^^^^^
+============
 
 NOTE: This package requires playground-lead.
 
 .. code-block:: bash
 
     composer require gammamatrix/playground-lead-resource
+
+
+
+site-playground-lead-angular
+****************************
+
+.. Note::
+
+    - This :term:`CSR` Angular application uses Angular Material and will eventually be generated by `playground-make-angular <https://github.com/gammamatrix/playground-make-angular>`_.

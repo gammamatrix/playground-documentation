@@ -1,5 +1,5 @@
 CMS Packages
-########################
+############
 
 The Playground CMS provides a content management system, with pages and
 snippets, that may be consumed by a Laravel application or served as JSON from a Laravel based API or Resource.
@@ -15,14 +15,14 @@ Features:
 
 
 playground-cms
-*************************
+**************
 
 Provides the models for playground-cms-api and playground-cms-resource.
 
-.. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-cms/develop/resources/docs/artisan-about-playground-cms.png
-..    :align: center
+.. figure:: https://raw.githubusercontent.com/gammamatrix/playground-cms/develop/resources/docs/artisan-about-playground-cms.png
+   :align: center
 
-..    ``artisan about`` for playground-cms
+   ``artisan about`` for playground-cms
 
 .. admonition:: Package Information
 
@@ -31,6 +31,8 @@ Provides the models for playground-cms-api and playground-cms-resource.
     Source on GitHub
         https://github.com/gammamatrix/playground-cms
 
+
+.. _playground-cms Configuration:
 
 Configuration
 =============
@@ -42,8 +44,12 @@ You can publish the configuration file with:
     php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag playground-config
 
 
+.. _playground-cms Environment Variables:
+
 Environment Variables
 =====================
+
+.. _playground-cms Migrations:
 
 Migrations
 ----------
@@ -51,13 +57,13 @@ Migrations
 All migrations are disabled by default.
 
 See the contents of the published config file: `database/migrations <https://github.com/gammamatrix/playground-cms/tree/develop/database/migrations>`_
-- NOTE: There are 15 tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
+- NOTE: There are four tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
 
 
 * If you do not wish to publish the migrations to your application, you may use the Environment Variable: ``PLAYGROUND_CMS_LOAD_MIGRATIONS`` in your ``.env``.
 
 ``PLAYGROUND_CMS_LOAD_MIGRATIONS``
-    Config: ``playground-cms-resource.middleware.default``
+    Config: ``playground-cms.load.migrations``
 
     Type: ``bool``
 
@@ -71,6 +77,8 @@ You can publish the migrations file with:
 
     php artisan vendor:publish --provider="Playground\Cms\ServiceProvider" --tag playground-migrations
 
+.. _playground-cms Installation:
+
 Installation
 ============
 
@@ -82,7 +90,7 @@ NOTE: This package is required by playground-cms-api and playground-cms-resource
 
 
 playground-cms-api
-*************************
+******************
 
 .. .. figure:: https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/apis/docs/artisan-about-playground-cms-api.png
 ..    :align: center
@@ -91,24 +99,32 @@ playground-cms-api
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-cms-api/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-cms-api/blob/develop/.github/workflows/ci.yml
     Packagist
-        packagist.org/packages/gammamatrix/playground-cms-api
+        https://packagist.org/packages/gammamatrix/playground-cms-api
     Source on GitHub
         https://github.com/gammamatrix/playground-cms-api
 
+.. _playground-cms-api API Documentation:
 
 API Documentation
 =================
 
-Documentation is generated from the gammamatrix/playground-cms-api/swagger.json provided in the repository packagist.org/packages/gammamatrix/playground-cms-api/swagger.json.
+Documentation is generated from the `gammamatrix/playground-cms-api/swagger.json <https://github.com/gammamatrix/playground-cms-api/blob/develop/swagger.json>`_.
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-cms-api/blob/develop/swagger.json
     Swagger Editor UI
-        editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/swagger.json
+        - https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/swagger.json
     Redocly
-        redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/swagger.json
+        https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-api/develop/swagger.json
 
+.. _playground-cms-api Configuration:
 
 Configuration
 =============
@@ -119,8 +135,12 @@ You can publish the configuration file with:
 
     php artisan vendor:publish --provider="Playground\Cms\Api\ServiceProvider" --tag="playground-config"
 
+.. _playground-cms-api Environment Variables:
+
 Environment Variables
 =====================
+
+.. _playground-cms-api Authentication and Authorization:
 
 Authentication and Authorization
 --------------------------------
@@ -146,56 +166,60 @@ Authentication and Authorization
 
     Default: ``['web', EnsureFrontendRequestsAreStateful]``
 
+.. _playground-cms-api Loading:
 
 Loading
 -------
 
 ``PLAYGROUND_CMS_API_LOAD_POLICIES``
-    Config: ``playground-cms-api.middleware.load.policies``
+    Config: ``playground-cms-api.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_LOAD_ROUTES``
-    Config: ``playground-cms-api.middleware.load.routes``
+    Config: ``playground-cms-api.load.routes``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_LOAD_TRANSLATIONS``
-    Config: ``playground-cms-api.middleware.load.translations``
+    Config: ``playground-cms-api.load.translations``
 
     Type: ``bool``
 
     Default: ``true``
 
+.. _playground-cms-api Revision:
 
 Revision
 --------
 
 ``PLAYGROUND_CMS_API_ROUTES_OPTIONAL``
-    Config: ``playground-cms-api.middleware.revisions.optional``
+    Config: ``playground-cms-api.revisions.optional``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_REVISIONS_PAGES``
-    Config: ``playground-cms-api.middleware.revisions.pages``
+    Config: ``playground-cms-api.revisions.pages``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_API_REVISIONS_SNIPPETS``
-    Config: ``playground-cms-api.middleware.revisions.snippets``
+    Config: ``playground-cms-api.revisions.snippets``
 
     Type: ``bool``
 
     Default: ``true``
 
+
+.. _playground-cms-api Routes:
 
 Routes
 ------
@@ -221,6 +245,8 @@ Routes
 
     Default: ``true``
 
+.. _playground-cms-api Installation:
+
 Installation
 ============
 
@@ -232,7 +258,7 @@ NOTE: This package requires playground-cms.
 
 
 playground-cms-resource
-*************************
+***********************
 
 Provides an API and a Laravel Blade UI for the Playground Content Management System.
 
@@ -243,11 +269,16 @@ Provides an API and a Laravel Blade UI for the Playground Content Management Sys
 
 .. admonition:: Package Information
 
+    Continuous Integration with GitHub Actions
+        https://github.com/gammamatrix/playground-cms-resource/actions
+    GitHub Actions Workflow
+        https://github.com/gammamatrix/playground-cms-resource/blob/develop/.github/workflows/ci.yml
     Packagist
         https://packagist.org/packages/gammamatrix/playground-cms-resource
     Source on GitHub
         https://github.com/gammamatrix/playground-cms-resource
 
+.. _playground-cms-resource API Documentation:
 
 API Documentation
 =================
@@ -256,11 +287,14 @@ Documentation is generated from the `gammamatrix/playground-cms-resource/swagger
 
 .. admonition:: Swagger Documentation Preview
 
+    OpenAPI Documentation Configuration
+        - https://github.com/gammamatrix/playground-cms-resource/blob/develop/swagger.json
     Swagger Editor UI
         https://editor.swagger.io/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-resource/develop/swagger.json
     Redocly
         https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/gammamatrix/playground-cms-resource/develop/swagger.json
 
+.. _playground-cms-resource Configuration:
 
 Configuration
 =============
@@ -271,8 +305,26 @@ You can publish the configuration file with:
 
     php artisan vendor:publish --provider="Playground\Cms\Resource\ServiceProvider" --tag playground-config
 
+.. _playground-cms-resource Environment Variables:
+
 Environment Variables
 =====================
+
+.. _playground-cms-resource About:
+
+About
+-------
+
+``PLAYGROUND_CMS_RESOURCE_ABOUT``
+    Config: ``playground-cms-resource.about``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+    Description: Displays information with the `artisan about` command.
+
+.. _playground-cms-resource Authentication and Authorization:
 
 Authentication and Authorization
 --------------------------------
@@ -305,56 +357,66 @@ If you wish to use your own policies, copy from `src/Policies <https://github.co
 
     Default: ``['web']``
 
+.. _playground-cms-resource Loading:
 
 Loading
 -------
 
 ``PLAYGROUND_CMS_RESOURCE_LOAD_POLICIES``
-    Config: ``playground-cms-resource.middleware.load.policies``
+    Config: ``playground-cms-resource.load.policies``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_LOAD_ROUTES``
-    Config: ``playground-cms-resource.middleware.load.routes``
+    Config: ``playground-cms-resource.load.routes``
+
+    Type: ``bool``
+
+    Default: ``true``
+
+``PLAYGROUND_CMS_RESOURCE_LOAD_TRANSLATIONS``
+    Config: ``playground-cms-resource.load.translations``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_LOAD_VIEWS``
-    Config: ``playground-cms-resource.middleware.load.views``
+    Config: ``playground-cms-resource.load.views``
 
     Type: ``bool``
 
     Default: ``true``
 
+.. _playground-cms-resource Revision:
 
 Revision
 --------
 
 ``PLAYGROUND_CMS_RESOURCE_ROUTES_OPTIONAL``
-    Config: ``playground-cms-resource.middleware.revisions.optional``
+    Config: ``playground-cms-resource.revisions.optional``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_REVISIONS_PAGES``
-    Config: ``playground-cms-resource.middleware.revisions.pages``
+    Config: ``playground-cms-resource.revisions.pages``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_REVISIONS_SNIPPETS``
-    Config: ``playground-cms-resource.middleware.revisions.snippets``
+    Config: ``playground-cms-resource.revisions.snippets``
 
     Type: ``bool``
 
     Default: ``true``
 
+.. _playground-cms-resource Routes:
 
 Routes
 ------
@@ -380,33 +442,34 @@ Routes
 
     Default: ``true``
 
+.. _playground-cms-resource Sitemap:
 
 Sitemap
 -------
 
 ``PLAYGROUND_CMS_RESOURCE_SITEMAP_ENABLE``
-    Config: ``playground-cms-resource.middleware.sitemap.enable``
+    Config: ``playground-cms-resource.sitemap.enable``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_SITEMAP_GUEST``
-    Config: ``playground-cms-resource.middleware.sitemap.guest``
+    Config: ``playground-cms-resource.sitemap.guest``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_SITEMAP_USER``
-    Config: ``playground-cms-resource.middleware.sitemap.user``
+    Config: ``playground-cms-resource.sitemap.user``
 
     Type: ``bool``
 
     Default: ``true``
 
 ``PLAYGROUND_CMS_RESOURCE_SITEMAP_VIEW``
-    Config: ``playground-cms-resource.middleware.sitemap.view``
+    Config: ``playground-cms-resource.sitemap.view``
 
     Type: ``string``
 
@@ -414,9 +477,10 @@ Sitemap
 
     Description: This blade file will be included on the application sitemap.
 
+.. _playground-cms-resource UI:
 
 UI
---
+----
 
 ``PLAYGROUND_CMS_RESOURCE_BLADE``
     Config: ``playground-cms-resource.blade``
@@ -426,6 +490,8 @@ UI
     Default: ``playground-cms-resource::``
 
     Description: Sets the view namespace for the package.
+
+.. _playground-cms-resource Installation:
 
 Installation
 ============
